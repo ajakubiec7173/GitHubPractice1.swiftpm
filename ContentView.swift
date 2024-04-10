@@ -8,10 +8,13 @@ struct ContentView: View {
     var body: some View {
         TextField("Enter a number",value: $number1,format: .number)
         TextField("Enter a Number", value: $number2, format: .number)
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
+        
+        Button(action: {
+            answer = number1+number2
+            print ("\(answer)")
+        }, label: {
+            "Answer"
+        })
     }
+}
 
